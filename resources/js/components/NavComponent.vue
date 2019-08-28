@@ -220,6 +220,7 @@
             <h3 class="cart-pop-header">
               <i class="fas fa-shopping-cart"></i> カート内の商品
             </h3>
+            <div class="cart-close"></div>
             <div class="cart-pop-body">
               <ul>
                 <li>
