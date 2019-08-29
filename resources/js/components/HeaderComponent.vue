@@ -1,7 +1,4 @@
 <style scoped>
-    .logo {
-        float: left;
-    }
     .right-side {
         float: right;
     }
@@ -13,7 +10,6 @@
     }
     .user-panel {
         text-align: right;
-        padding: 0 7px;
     }
     .user-panel span {
         color: #666;
@@ -21,21 +17,23 @@
         margin: 0 10px;
     }
     button {
-        margin: 0 5px;
+        margin-left: 5px;
     }
     .logo {
-        line-height: 75px;
+        float: left;
         font-size: 44px;
         color: #28a745;
-        padding: 0 10px;
         font-weight: bold;
     }
     .logo span {
         font-size: 20px;
         margin-left: 10px;
     }
+    .nav-link {
+        padding: 0.5rem 0 0.5rem 2rem;
+    }
     header {
-        padding: 5px 10px;
+        margin: 15px 0;
     }
 </style>
 
@@ -53,7 +51,7 @@
                 </ul>
             </div>
             <div class="user-panel">
-                <span><i class="fas fa-user"></i> Test様</span>
+                <span><i class="fas fa-user"></i> Developer様</span>
                 <span><i class="fab fa-product-hunt"></i> 999ポイント</span>
                 <button type="button" class="btn btn-outline-success">ログイン</button>
                 <button type="button" class="btn btn-success">新規会員登録</button>

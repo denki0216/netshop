@@ -21,8 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 Vue.component('nav-component', require('./components/NavComponent.vue').default);
-Vue.component('user-component', require('./components/UserComponent.vue').default);
-Vue.component('reserve-component', require('./components/ReserveComponent.vue').default);
+Vue.component('carousel-component', require('./components/CarouselComponent.vue').default);
 Vue.component('category-component', require('./components/CategoryComponent.vue').default);
 Vue.component('recommend-component', require('./components/RecommendComponent.vue').default);
 Vue.component('campaign-component', require('./components/CampaignComponent.vue').default);

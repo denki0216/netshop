@@ -1,4 +1,9 @@
 <style lang='scss' scoped>
+.navbar {
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border-bottom: 1px solid #fff;
+}
 .form-inline .form-control {
   width: 300px;
 }
@@ -14,7 +19,7 @@
   font-size: 24px;
 }
 .cart-icon span {
-  background-color: rgb(253, 23, 73);
+  background-color: #f6993f;
   color: #fff;
   width: 18px;
   height: 18px;
@@ -32,7 +37,7 @@
   border-radius: 5px;
   width: 180px;
   /* line-height: 30px; */
-  color: rgb(253, 23, 73);
+  color: #f6993f;
   font-size: 20px;
   font-weight: bold;
   text-align: right;
@@ -142,13 +147,13 @@
     border-right: none;
   }
   button:nth-child(1) {
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     width: 28px;
     height: 28px;
     margin-top: 1px;
   }
   button:nth-child(3) {
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 3px 3px 0;
     width: 28px;
     height: 28px;
     margin-top: 1px;
@@ -169,7 +174,7 @@
         color: #666;
         text-align: right;
         span {
-            color:#fd1749;
+            color:#f6993f;
             font-size: 20px;
         }
     }
@@ -186,7 +191,7 @@
 </style>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-success bg-success">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-success bg-success">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form class="form-inline mr-4">
         <input
@@ -339,11 +344,11 @@
                     <div class="price-total">合計金額 (税込)：<span>1848円</span></div>
                     <div class="price-left">送料無料まで6666円</div>
                 </div>
-              <button type="button" class="btn btn-warning btn-lg">お会計へ</button>
+              <button type="button" class="btn btn-success btn-lg"><i class="fas fa-credit-card"></i> お会計へ</button>
             </div>
           </div>
         </div>
-        <button type="button" class="btn btn-warning">お会計へ</button>
+        <button type="button" class="btn btn-light"><i class="fas fa-credit-card"></i> お会計へ</button>
       </div>
     </div>
   </nav>

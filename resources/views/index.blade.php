@@ -11,16 +11,15 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="container-fluid">
         <header-component></header-component>
         <nav-component></nav-component>
-        <div>
-            <aside>
-                <user-component></user-component>
-                <reserve-component></reserve-component>
+        <div class="row">
+            <aside class="col-2">
                 <category-component></category-component>
             </aside>
-            <main>
+            <main class="col-10">
+                <carousel-component></carousel-component>
                 <recommend-component></recommend-component>
                 <campaign-component></campaign-component>
             </main>
