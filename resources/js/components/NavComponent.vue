@@ -38,6 +38,7 @@
   text-align: right;
   margin: 0 20px;
   position: relative;
+  cursor:pointer;
 }
 .price-area span {
   font-size: 14px;
@@ -51,6 +52,8 @@
   width: 600px;
   max-width: 600px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  display: none;
+  cursor:auto;
 }
 .nav-item:nth-child(1) {
     border-left: 1px solid #9bd1b1;
@@ -68,6 +71,22 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 0;
+  position: relative;
+  .cart-close {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 20px;
+      color:#999;
+      &:hover{
+          color: #38c172;
+      }
+  }
 }
 .cart-pop-body {
   min-height: 85px;
@@ -208,19 +227,19 @@
         </li>
       </ul>
       <div class="navbar-nav">
-        <div class="price-area">
+        <div class="price-area" v-on:mouseenter="openCartPanel">
           <div class="cart-icon">
             <i class="fas fa-shopping-cart align-middle"></i>
             <span>9</span>
           </div>
           <b class="align-middle">9,999</b>
           <span>円</span>
-          <div class="cart-pop popover bs-popover-bottom">
+          <div class="cart-pop popover bs-popover-bottom" id="cart-panel">
             <div class="arrow"></div>
             <h3 class="cart-pop-header">
               <i class="fas fa-shopping-cart"></i> カート内の商品
+              <div class="cart-close" v-on:click="closeCartPanel">×</div>
             </h3>
-            <div class="cart-close">x</div>
             <div class="cart-pop-body">
               <ul>
                 <li>
@@ -331,5 +350,23 @@
 </template>
 
 <script>
-export default {};
+    export default {
+        methods: {
+            openCartPanel: function(){
+                $('#cart-panel').show('fast');
+            },
+            closeCartPanel: function(){
+                $('#cart-panel').hide('fast');
+            }
+        }
+    };
+    
+    $(document).on('click',function(e){
+        if ($('#cart-panel').attr('style')=='display: block;') {
+            if( $.inArray(e.target, $('#cart-panel *')) == -1 ){  
+                $('#cart-panel').hide('fast');  
+            }  
+        }
+    }); 
+
 </script>
